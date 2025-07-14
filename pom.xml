@@ -63,6 +63,7 @@
         <module>pulsar-metrics-contrib</module>
         <module>pulsar-auth-contrib</module>
         <module>pulsar-rpc-contrib</module>
+        <module>pulsar-admin-mcp-contrib</module>
     </modules>
 
     <dependencyManagement>
@@ -210,7 +211,6 @@
                     <configLocation>./src/main/resources/checkstyle.xml</configLocation>
                     <suppressionsLocation>./src/main/resources/suppressions.xml</suppressionsLocation>
                     <includeTestSourceDirectory>true</includeTestSourceDirectory>
-                    <encoding>UTF-8</encoding>
                     <excludes>**/*.proto</excludes>
                     <!-- Example exclusion -->
                 </configuration>
@@ -250,13 +250,6 @@
                         <puml>APOSTROPHE_STYLE</puml>
                     </mapping>
                 </configuration>
-                <dependencies>
-                    <dependency>
-                        <groupId>com.mycila</groupId>
-                        <artifactId>license-maven-plugin-git</artifactId>
-                        <version>${license-maven-plugin.version}</version>
-                    </dependency>
-                </dependencies>
                 <executions>
                     <execution>
                         <goals>
